@@ -1,6 +1,6 @@
-const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
-const USERNAME = process.env.REACT_APP_USERNAME;
-const PASSWORD = process.env.REACT_APP_PASSWORD;
+const API_ENDPOINT = process.env.VITE_APP_API_ENDPOINT;
+const USERNAME = process.env.VITE_APP_USERNAME;
+const PASSWORD = process.env.VITE_APP_PASSWORD;
 
 export const analyzeText = async (text) => {
     const headers = new Headers();
