@@ -3,49 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophist - 詭弁分析ツール</title>
-    <!-- HTMX -->
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-    <!-- TailwindCSS -->
+    <title>Philosophist - 詭弁チェッカー</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50">
-    <div class="max-w-3xl mx-auto p-4 space-y-4">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-            <h1 class="text-2xl font-bold mb-2">詭弁分析ツール</h1>
-            <p class="text-gray-600 mb-4">テキストを入力して、論理的な誤りがないか分析します</p>
-
-            <div id="analysis-form">
-                <div class="mb-4">
-                    <textarea
-                        id="input-text"
-                        class="w-full p-3 border rounded-lg min-h-[100px]"
-                        placeholder="分析したいテキストを入力してください"></textarea>
-                </div>
-
-                <button
-                    onclick="analyzeText()"
-                    class="w-full bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 transition-colors"
-                    id="submit-button">
-                    分析する
-                </button>
-            </div>
-
-            <!-- ローディングインジケーター -->
-            <div id="loading" class="hidden">
-                <div class="flex justify-center my-4">
-                    <div class="animate-spin rounded-full h-6 w-6 border-2 border-blue-500 border-t-transparent"></div>
-                </div>
-            </div>
-
-            <!-- 結果表示エリア -->
-            <div id="result" class="mt-4"></div>
-        </div>
-    </div>
-
-    <!-- Custom JS -->
-    <script src="app.js"></script>
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>
